@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>⏰ Alarm clock</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    </head>
+    <body onload="updateClock(); setInterval('updateClock()',1000)"  class="bg-info bg-gradient" style="--bs-bg-opacity: .5">
+      <div class="alertContainer"></div>
+      <div class="container">
+        <h1>Option to set an Alarm ⏰ </h1>
+        <div class="realTimeClock" id="clock"></div>
+        <hr style="border: 15px 0 0 0;">
+      </div>
+      <div class="container">
+          <form >
+            <div class="form-group m-3 mx-0 row">
+              <label for="alarm" class="form-label p-1"><h4>Set Your Alarm</h4></label>  
+              <!--  Format for creating a new Date("July 4 1776 12:30"); -->
+              <input type="text" class="form-control " id="alarm" placeholder="Enter your time as Month date year hh:mm:ss" >
+              <small class="invalid-feedback" id="timeValid">Your time must be a valid time as- January 01 1970 23:35:00.</small>
+              <button type="submit" class="btn btn-primary my-2 col" id="alarmSubmit"><h6 class="m-0 p-1">Set Alarm</h6></button>
+            </div>
+          </form>
+          <hr>
+      </div>
+      <div class="alarmContainer container m-6 p-6"></div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+      <script src="index.js"></script>
+  </body>
+</html>
